@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Inventory Management System",
+    "description": "Production-ready inventory management platform with secure authentication, role-based access control, and analytics dashboard. Built REST APIs using Node.js and Prisma with PostgreSQL for scalable data handling and validation.",
+    "coverImage": "/invmng-project.png",
+    "githubLink": "https://github.com/MitulMovaliya/InvMng",
+    "liveLink": "https://invmng.mitulmovaliya.me/",
+    "techStack": [
+      "Next.js",
+      "Express",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "JWT",
+      "Zod",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "title": "QuestNote",
+    "description": "Full-stack AI-powered note-taking platform enabling semantic search and conversational Q&A over user notes. Designed vector embedding pipeline using OpenAI API and ChromaDB for context-aware retrieval with persistent chat history.",
+    "coverImage": "/questnote-project.png",
+    "githubLink": "https://github.com/MitulMovaliya/QuestNote",
+    "liveLink": "https://questnote.mitulmovaliya.me/",
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Zustand",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "OpenAI API",
+      "ChromaDB",
+      "JWT",
+      "Google OAuth"
+    ]
+  }
+]

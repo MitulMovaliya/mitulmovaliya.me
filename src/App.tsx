@@ -1,19 +1,47 @@
-import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
+import { Navbar } from "@/components/navbar"
+import { ContactSection } from "@/components/sections/contact-section"
+import { ExperienceSection } from "@/components/sections/experience-section"
+import { FooterSection } from "@/components/sections/footer-section"
+import { HeroSection } from "@/components/sections/hero-section"
+import { ProjectSection } from "@/components/sections/project-section"
+import { SkillsSection } from "@/components/sections/skills-section"
 
 export function App() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 8)
+    }
+
+    handleScroll()
+    window.addEventListener("scroll", handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <div className="min-h-svh bg-background">
+      <Navbar isScrolled={isScrolled} />
+
+      <main className="pb-20">
+        <HeroSection />
+
+        <ExperienceSection />
+
+        <div className="mx-auto max-w-7xl px-6">
+          <SkillsSection />
+
+          <ProjectSection />
+
+          <ContactSection />
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+      </main>
+
+      <FooterSection />
     </div>
   )
 }

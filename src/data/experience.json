@@ -1,0 +1,23 @@
+[
+  {
+    "companyName": "National Esports Studios",
+    "roles": [
+      {
+        "jobTitle": "Broadcast Developer",
+        "jobType": "Freelance",
+        "description": "Engineered high-performance, real-time web graphics for live esports broadcasts, specializing in bridging the gap between dynamic data and professional streaming environments (OBS).",
+        "keyContributions": [
+          "**Real-Time Graphics:** Developed animated, browser-based overlays using modern JavaScript frameworks for seamless OBS integration.",
+          "**Data Integration:** Architected API-driven systems to display live match stats, rankings, and team events with sub-second latency.",
+          "**Performance Tuning:** Optimized rendering pipelines and animations to ensure a stable 60 FPS during high-traffic live streams.",
+          "**Reliability:** Ensured precise synchronization between live gameplay data and on-screen visual elements."
+        ],
+        "timeline": {
+          "start": "May 2025",
+          "end": "Jun 2025"
+        },
+        "currentlyWorking": false
+      }
+    ]
+  }
+]

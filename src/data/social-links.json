@@ -1,0 +1,20 @@
+[
+  {
+    "id": "github",
+    "label": "GitHub",
+    "href": "https://github.com/MitulMovaliya",
+    "external": true
+  },
+  {
+    "id": "linkedin",
+    "label": "LinkedIn",
+    "href": "https://www.linkedin.com/in/mitulmovaliya/",
+    "external": true
+  },
+  {
+    "id": "email",
+    "label": "Email",
+    "href": "mailto:mitulmovaliya@gmail.com",
+    "external": false
+  }
+]

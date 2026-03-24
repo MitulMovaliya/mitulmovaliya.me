@@ -1,0 +1,37 @@
+[
+  {
+    "category": "Frontend",
+    "items": [
+      "React.js",
+      "Next.js",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "shadcn/ui"
+    ]
+  },
+  {
+    "category": "Backend",
+    "items": [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "WebSockets",
+      "JWT/OAuth",
+      "Authentication"
+    ]
+  },
+  {
+    "category": "Database",
+    "items": ["MongoDB", "PostgreSQL", "Prisma ORM"]
+  },
+  {
+    "category": "Developer Tools",
+    "items": ["Git", "GitHub", "Vercel", "Railway", "Postman"]
+  },
+  {
+    "category": "Programming Languages",
+    "items": ["C", "C++", "Java", "JavaScript", "Python"]
+  }
+]
