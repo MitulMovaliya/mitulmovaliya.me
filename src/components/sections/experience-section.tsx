@@ -34,7 +34,7 @@ function renderContributionText(contribution: string) {
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-16 sm:py-24">
+    <section id="experience" className="py-20 max-sm:py-10">
       <div className="mx-auto w-full max-w-7xl px-6">
         <div className="max-w-3xl">
           <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">

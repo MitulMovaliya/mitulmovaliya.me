@@ -15,7 +15,7 @@ type Project = {
 
 export function ProjectSection() {
   return (
-    <section id="project" className="py-20 sm:py-28">
+    <section id="project" className="py-20 max-sm:py-10">
       <div className="max-w-3xl">
         <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
           Projects

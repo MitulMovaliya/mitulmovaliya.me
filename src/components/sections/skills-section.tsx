@@ -7,7 +7,7 @@ type SkillGroup = {
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-16 sm:py-24">
+    <section id="skills" className="py-20 max-sm:py-10">
       <div className="max-w-3xl">
         <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
           Skills

@@ -84,7 +84,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 sm:py-28">
+    <section id="contact" className="py-20 max-sm:py-10">
       <div className="max-w-3xl">
         <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
           Contact
