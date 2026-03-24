@@ -15,7 +15,7 @@ type Project = {
 
 export function ProjectSection() {
   return (
-    <section id="project" className="py-28">
+    <section id="project" className="py-20 sm:py-28">
       <div className="max-w-3xl">
         <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
           Projects
@@ -25,16 +25,16 @@ export function ProjectSection() {
         </h2>
       </div>
 
-      <div className="mt-20 grid gap-6 md:grid-cols-2">
+      <div className="mt-10 grid gap-6 md:grid-cols-2">
         {(projectsData as Project[]).map((project) => (
           <article
             key={project.title}
-            className="overflow-hidden rounded-2xl border border-border bg-card/80"
+            className="card-lift overflow-hidden rounded-2xl border border-border bg-card/80"
           >
-            <div className="h-72 w-full overflow-hidden bg-muted/40">
+            <div className="h-56 w-full overflow-hidden bg-muted/40 sm:h-72">
               <img
                 src={project.coverImage}
-                alt={project.title}
+                alt={`${project.title} project preview`}
                 className="h-full w-full object-cover"
                 loading="lazy"
               />
@@ -63,7 +63,8 @@ export function ProjectSection() {
                 <a
                   href={project.githubLink}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer noopener"
+                  aria-label={`Open ${project.title} source code on GitHub`}
                   className={cn(
                     buttonVariants({ variant: "outline", size: "sm" })
                   )}
@@ -74,7 +75,8 @@ export function ProjectSection() {
                 <a
                   href={project.liveLink}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noreferrer noopener"
+                  aria-label={`Open live demo for ${project.title}`}
                   className={cn(
                     buttonVariants({ variant: "default", size: "sm" })
                   )}

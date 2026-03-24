@@ -30,18 +30,21 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="hero-circle-bg relative isolate flex min-h-svh w-full items-center overflow-hidden pt-32 pb-12"
+      className="hero-circle-bg relative isolate flex min-h-svh w-full items-center overflow-hidden pt-24 pb-10 sm:pt-32 sm:pb-12"
     >
-      <div className="hero-circle hero-circle-one pointer-events-none absolute -top-24 -right-24 size-112 rounded-full" />
-      <div className="hero-circle hero-circle-two pointer-events-none absolute -bottom-32 -left-20 size-88 rounded-full" />
+      <div className="hero-circle hero-circle-one pointer-events-none absolute -top-24 -right-24 hidden size-112 rounded-full sm:block" />
+      <div className="hero-circle hero-circle-two pointer-events-none absolute -bottom-32 -left-20 hidden size-88 rounded-full sm:block" />
       <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-background/30 to-background" />
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6">
         <div className="max-w-3xl">
-          <p className="inline-flex rounded-full border border-border bg-background/70 px-3 py-1 text-xs font-medium tracking-wide text-foreground/80 uppercase dark:bg-muted/60 dark:text-muted-foreground">
-            <span className="mt-0.5 mr-2 size-2 rounded-full bg-emerald-500" />
-            Available for new opportunities
+          <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-2.5 py-1 text-[0.65rem] font-medium tracking-wide text-foreground/80 uppercase sm:px-3 sm:text-xs dark:bg-muted/60 dark:text-muted-foreground">
+            <span className="size-2 rounded-full bg-emerald-500" />
+            <span className="sm:hidden">Open to work</span>
+            <span className="hidden sm:inline">
+              Available for new opportunities
+            </span>
           </p>
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-balance sm:text-6xl">
+          <h1 className="mt-6 text-3xl font-semibold tracking-tight text-balance sm:text-6xl">
             Mitul Movaliya
           </h1>
           <h2 className="mt-3 text-xl font-medium text-foreground/90 sm:text-2xl dark:text-muted-foreground">
@@ -53,10 +56,13 @@ export function HeroSection() {
             systems.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
             <a
               href="/resume.pdf"
-              className={cn(buttonVariants({ variant: "default", size: "lg" }))}
+              className={cn(
+                buttonVariants({ variant: "default", size: "lg" }),
+                "justify-center"
+              )}
               download
             >
               <IconDownload />
@@ -64,7 +70,10 @@ export function HeroSection() {
             </a>
             <a
               href="#contact"
-              className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "justify-center"
+              )}
             >
               <IconSend />
               Get in touch

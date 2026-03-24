@@ -84,7 +84,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-28">
+    <section id="contact" className="py-20 sm:py-28">
       <div className="max-w-3xl">
         <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
           Contact
@@ -101,7 +101,7 @@ export function ContactSection() {
       <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
         <form
           onSubmit={handleSubmit}
-          className="rounded-2xl border border-border bg-card/80 p-6"
+          className="card-lift rounded-2xl border border-border bg-card/80 p-6"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="flex flex-col gap-2 text-sm">
@@ -111,6 +111,8 @@ export function ContactSection() {
                 name="name"
                 required
                 placeholder="Your name"
+                autoComplete="name"
+                minLength={2}
                 className="h-10 rounded-lg border border-input bg-background px-3 text-sm transition-colors outline-none focus:border-ring"
               />
             </label>
@@ -122,6 +124,7 @@ export function ContactSection() {
                 name="email"
                 required
                 placeholder="you@example.com"
+                autoComplete="email"
                 className="h-10 rounded-lg border border-input bg-background px-3 text-sm transition-colors outline-none focus:border-ring"
               />
             </label>
@@ -134,6 +137,7 @@ export function ContactSection() {
               name="subject"
               required
               placeholder="Project idea / job opportunity"
+              minLength={3}
               className="h-10 rounded-lg border border-input bg-background px-3 text-sm transition-colors outline-none focus:border-ring"
             />
           </label>
@@ -145,6 +149,7 @@ export function ContactSection() {
               required
               rows={6}
               placeholder="Tell me about your project requirements..."
+              minLength={20}
               className="min-h-34 resize-y rounded-lg border border-input bg-background px-3 py-2 text-sm transition-colors outline-none focus:border-ring"
             />
           </label>
@@ -162,13 +167,19 @@ export function ContactSection() {
           </button>
 
           {isSubmitted ? (
-            <p className="mt-3 text-sm text-emerald-600 dark:text-emerald-400">
+            <p
+              role="status"
+              aria-live="polite"
+              className="mt-3 text-sm text-emerald-600 dark:text-emerald-400"
+            >
               Message sent successfully.
             </p>
           ) : null}
 
           {submitError ? (
-            <p className="mt-3 text-sm text-destructive">{submitError}</p>
+            <p role="alert" className="mt-3 text-sm text-destructive">
+              {submitError}
+            </p>
           ) : null}
         </form>
 
@@ -190,7 +201,8 @@ export function ContactSection() {
                     key={social.id}
                     href={social.href}
                     target={social.external ? "_blank" : undefined}
-                    rel={social.external ? "noreferrer" : undefined}
+                    rel={social.external ? "noreferrer noopener" : undefined}
+                    aria-label={`Open ${social.label}`}
                     className={cn(
                       buttonVariants({ variant: "outline", size: "sm" }),
                       "justify-start"

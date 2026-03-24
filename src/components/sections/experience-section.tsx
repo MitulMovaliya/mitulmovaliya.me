@@ -34,7 +34,7 @@ function renderContributionText(contribution: string) {
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-24">
+    <section id="experience" className="py-16 sm:py-24">
       <div className="mx-auto w-full max-w-7xl px-6">
         <div className="max-w-3xl">
           <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
@@ -67,7 +67,7 @@ export function ExperienceSection() {
                 {company.roles.map((role) => (
                   <div
                     key={`${company.companyName}-${role.jobTitle}-${role.timeline.start}`}
-                    className="group relative rounded-2xl border border-border bg-card/80 p-5 transition-colors hover:bg-card"
+                    className="card-lift group relative rounded-2xl border border-border bg-card/80 p-5 transition-colors hover:bg-card"
                   >
                     <div className="absolute top-0 -left-6.5 size-3 rounded-full bg-primary ring-4 ring-background" />
 

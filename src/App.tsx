@@ -25,9 +25,16 @@ export function App() {
 
   return (
     <div className="min-h-svh bg-background">
+      <a
+        href="#main-content"
+        className="sr-only fixed top-3 left-3 z-50 rounded-md border border-border bg-background px-3 py-2 text-sm text-foreground shadow-sm focus:not-sr-only"
+      >
+        Skip to content
+      </a>
+
       <Navbar isScrolled={isScrolled} />
 
-      <main className="pb-20">
+      <main id="main-content" className="pb-20">
         <HeroSection />
 
         <ExperienceSection />

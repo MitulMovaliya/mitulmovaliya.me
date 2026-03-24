@@ -118,6 +118,11 @@
 }
 
 @layer base {
+  html {
+    @apply font-mono;
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -150,10 +155,24 @@
 
   body {
     @apply bg-background text-foreground;
+    text-rendering: optimizeLegibility;
   }
 
-  html {
-    @apply font-mono;
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 35%, transparent);
+    color: var(--foreground);
+  }
+
+  section[id] {
+    scroll-margin-top: 110px;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
   }
 }
 
@@ -216,4 +235,30 @@
   background: linear-gradient(180deg,
       oklch(0.218 0.008 223.9 / 0.78) 0%,
       oklch(0.148 0.004 228.8 / 0.4) 100%);
+}
+
+.card-lift {
+  transition: transform 250ms ease, box-shadow 250ms ease,
+    border-color 250ms ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px color-mix(in oklab, var(--foreground) 16%, transparent);
+  border-color: color-mix(in oklab, var(--primary) 32%, var(--border));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

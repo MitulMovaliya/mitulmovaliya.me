@@ -7,7 +7,7 @@ type SkillGroup = {
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="py-16 sm:py-24">
       <div className="max-w-3xl">
         <p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
           Skills
@@ -21,7 +21,7 @@ export function SkillsSection() {
         {(skillsData as SkillGroup[]).map((group) => (
           <article
             key={group.category}
-            className="rounded-2xl border border-border bg-card/80 p-5"
+            className="card-lift rounded-2xl border border-border bg-card/80 p-5"
           >
             <h3 className="text-base font-semibold tracking-tight">
               {group.category}
