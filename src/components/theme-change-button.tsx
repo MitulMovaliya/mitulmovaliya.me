@@ -4,10 +4,10 @@ import { useTheme } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 
 export function ThemeChangeButton() {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
 
   const handleThemeChange = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
   }
 
   return (
@@ -19,7 +19,7 @@ export function ThemeChangeButton() {
       title="Toggle theme"
       className="cursor-pointer"
     >
-      {theme === "dark" ? <IconSun /> : <IconMoon />}
+      {resolvedTheme === "dark" ? <IconSun /> : <IconMoon />}
     </Button>
   )
 }

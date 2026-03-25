@@ -34,7 +34,7 @@ export function HeroSection() {
     >
       <div className="hero-circle hero-circle-one pointer-events-none absolute -top-24 -right-24 hidden size-112 rounded-full sm:block" />
       <div className="hero-circle hero-circle-two pointer-events-none absolute -bottom-32 -left-20 hidden size-88 rounded-full sm:block" />
-      <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-background/30 to-background" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background/10 via-background to-background/10" />
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6">
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-2.5 py-1 text-[0.65rem] font-medium tracking-wide text-foreground/80 uppercase sm:px-3 sm:text-xs dark:bg-muted/60 dark:text-muted-foreground">
